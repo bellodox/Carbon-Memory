@@ -68,12 +68,16 @@ Alternative considered and rejected:
 
 | # | File | Change | Approx LOC |
 |---|---|---|---|
-| 1 | `understand-anything-plugin/packages/core/package.json` | Add `"tree-sitter-dart": "^1.0.0"` dependency | 1 |
-| 2 | `.../languages/configs/dart.ts` | **New** — `LanguageConfig` with `treeSitter` field | ~35 |
-| 3 | `.../languages/configs/index.ts` | Import + register `dartConfig` in the code-languages block (both `builtinLanguageConfigs` array and the named re-export block) | ~4 |
-| 4 | `.../plugins/extractors/dart-extractor.ts` | **New** — `DartExtractor` class implementing `LanguageExtractor` | ~400 |
-| 5 | `.../plugins/extractors/index.ts` | Import `DartExtractor`, re-export it, and add `new DartExtractor()` to `builtinExtractors` | ~3 |
-| 6 | `.../plugins/extractors/__tests__/dart-extractor.test.ts` | **New** — ~22 vitest cases | ~370 |
+| 1 | `understand-anything-plugin/pnpm-workspace.yaml` | Register `packages/tree-sitter-dart-wasm/*` | 1 |
+| 2 | `.../packages/tree-sitter-dart-wasm/package.json` | **New** — workspace package metadata | ~6 |
+| 3 | `.../packages/tree-sitter-dart-wasm/tree-sitter-dart.wasm` | **New** — vendored freshly-built wasm (~745 KB binary) | binary |
+| 4 | `.../packages/tree-sitter-dart-wasm/BUILD.md` | **New** — provenance + rebuild instructions | ~30 |
+| 5 | `.../packages/core/package.json` | Add `"@understand-anything/tree-sitter-dart-wasm": "workspace:*"` dependency | 1 |
+| 6 | `.../packages/core/src/languages/configs/dart.ts` | **New** — `LanguageConfig` with `treeSitter` field pointing at the workspace package | ~35 |
+| 7 | `.../packages/core/src/languages/configs/index.ts` | Import + register `dartConfig` in the code-languages block (both `builtinLanguageConfigs` array and the named re-export block) | ~4 |
+| 8 | `.../packages/core/src/plugins/extractors/dart-extractor.ts` | **New** — `DartExtractor` class implementing `LanguageExtractor` | ~400 |
+| 9 | `.../packages/core/src/plugins/extractors/index.ts` | Import `DartExtractor`, re-export it, and add `new DartExtractor()` to `builtinExtractors` | ~3 |
+| 10 | `.../packages/core/src/plugins/extractors/__tests__/dart-extractor.test.ts` | **New** — ~22 vitest cases | ~370 |
 
 `pnpm-lock.yaml` regenerates automatically via `pnpm install`.
 
@@ -85,7 +89,7 @@ export const dartConfig = {
   displayName: "Dart",
   extensions: [".dart"],
   treeSitter: {
-    wasmPackage: "tree-sitter-dart",
+    wasmPackage: "@understand-anything/tree-sitter-dart-wasm",
     wasmFile: "tree-sitter-dart.wasm",
   },
   concepts: [
@@ -118,31 +122,67 @@ export const dartConfig = {
 
 ## WASM grammar source
 
-**Use `tree-sitter-dart@1.0.0`** (publisher: amaanq; the canonical Dart
-tree-sitter fork). Verification performed during design:
+**Ship a freshly-built wasm as a workspace-internal package**
+`@understand-anything/tree-sitter-dart-wasm`, built from the `tree-sitter-dart`
+grammar source. The grammar source is sound; only the prebuilt npm artifact is
+ABI-incompatible with the current `web-tree-sitter`.
 
-- The npm tarball (`tree-sitter-dart-1.0.0.tgz`) ships a prebuilt
-  `tree-sitter-dart.wasm` at the package root. Confirmed via `npm pack` + `tar
-  tzf`.
-- The grammar exposes 316 node types including `class_definition`,
-  `function_signature`, `method_signature`, `mixin_declaration`,
-  `extension_declaration`, `enum_declaration`, `library_import`,
-  `import_or_export`, `mixin_application_class`.
-- This matches the publishing shape the Kotlin PR relied on
-  (`@tree-sitter-grammars/tree-sitter-kotlin` ships a prebuilt `.wasm` alongside
-  native bindings); the existing `TreeSitterPlugin` loader resolves it via
-  `require.resolve("tree-sitter-dart/tree-sitter-dart.wasm")` with no loader
-  changes.
-- `@tree-sitter-grammars/tree-sitter-dart` does not exist (404 on npm), and
-  `@driftlog/tree-sitter-dart` ships only native bindings via `node-gyp-build`.
-  `tree-sitter-dart` is the only WASM-shipping option on the registry.
+### Why not the upstream `tree-sitter-dart` package directly
 
-Caveat: `tree-sitter-dart@1.0.0` was last published 2023-02-24 and the package
-description ("Dart grammar attempt for tree-sitter") signals an early/community
-status. Mitigation: the extractor's tests parse real Dart snippets through the
-WASM grammar — any future grammar regression surfaces immediately. If the
-grammar later proves unmaintained, swapping in a fork is a one-line change in
-`dartConfig.treeSitter.wasmPackage`.
+The published `tree-sitter-dart@1.0.0` tarball does ship a `.wasm`, but it was
+built in 2023-02 with a tree-sitter CLI that emitted the OLD WebAssembly dynamic
+linking format. The wasm header is `\0asm` then a custom section named
+`"dylink"` (no `.0` suffix). The project's current `web-tree-sitter@^0.26.6`
+expects the newer `"dylink.0"` format (the standardized name since tree-sitter
+CLI ~0.22). Attempting to load the upstream wasm fails inside
+`getDylinkMetadata` with a bare `Error`. Verified during design via a live
+probe against `web-tree-sitter@0.26.8` in the project's own `node_modules`.
+
+`@tree-sitter-grammars/tree-sitter-dart` does not exist (404 on npm);
+`@driftlog/tree-sitter-dart@1.0.4` ships no wasm at all. There is no
+WASM-shipping Dart grammar on the npm registry that works with the current
+`web-tree-sitter`.
+
+### How the freshly-built wasm is sourced
+
+Rebuilding the same grammar source with the current `tree-sitter-cli@0.26.x` +
+`wasi-sdk-29` toolchain produces a `dylink.0`-format wasm (~745 KB) that loads
+cleanly. Confirmed during design: the rebuilt wasm parses every construct the
+extractor needs (functions, classes, mixins, extensions, enums, imports,
+exports, calls). The grammar.js itself is unchanged from the upstream package.
+
+### Packaging approach
+
+Add a new workspace package at
+`understand-anything-plugin/packages/tree-sitter-dart-wasm/` containing:
+
+- `tree-sitter-dart.wasm` — the freshly-built artifact (vendored binary).
+- `package.json` — `{ "name": "@understand-anything/tree-sitter-dart-wasm",
+  "version": "0.1.0", "main": "tree-sitter-dart.wasm" }`.
+- `BUILD.md` — short note documenting **how the wasm was built** (CLI version,
+  grammar source SHA, wasi-sdk version) so the next maintainer can rebuild it.
+
+Register the new workspace package in
+`understand-anything-plugin/pnpm-workspace.yaml`. Add it as a dependency of
+`@understand-anything/core` via `"workspace:*"`. The existing `TreeSitterPlugin`
+loader resolves it unchanged via
+`require.resolve("@understand-anything/tree-sitter-dart-wasm/tree-sitter-dart.wasm")`
+— **no loader code changes**.
+
+This approach was chosen over three alternatives:
+
+- **Depend on broken upstream**: would fail at runtime; rejected.
+- **Modify the loader to support local file paths**: more invasive, sets a
+  precedent that complicates other languages.
+- **Publish under a third-party npm scope**: cleaner long-term but requires
+  external infra; can transition later if a published fix lands.
+
+Tradeoff acknowledged: ~745 KB binary committed to git. Comparable in size to
+the wasms already pulled in by `tree-sitter-rust` / `tree-sitter-go` at install
+time (those just aren't committed). If amaanq/tree-sitter-dart later publishes
+a refreshed npm release with a `dylink.0` wasm, switching back is a two-line
+change: delete the workspace package, depend on `tree-sitter-dart` directly,
+flip the `wasmPackage` field.
 
 ## `DartExtractor` — what it extracts
 
@@ -301,9 +341,17 @@ contains Dart-derived class/function nodes and call-graph edges.
 
 ## Open questions
 
-None at design time. The two genuine unknowns (WASM availability + grammar
-node-type coverage) were resolved during exploration:
+None at design time. Three genuine unknowns were resolved during exploration:
 
-- WASM ships with `tree-sitter-dart@1.0.0` — confirmed via `npm pack`.
-- Grammar exposes all needed node types — confirmed via inspection of
-  `node-types.json`.
+- **WASM availability**: the upstream `tree-sitter-dart@1.0.0` wasm uses the
+  pre-`dylink.0` format and fails to load in `web-tree-sitter@0.26.x`. A
+  fresh build with the current `tree-sitter-cli@0.26.x` + `wasi-sdk-29`
+  produces a `dylink.0`-format wasm that loads and parses correctly. Ship via
+  a workspace-internal package; documented above.
+- **Grammar node-type coverage**: confirmed via inspection of
+  `node-types.json` (316 named types) and via a live AST probe on a Dart
+  sample covering every construct the extractor handles. Concrete AST shapes
+  for each construct are documented in the implementation plan.
+- **Visibility semantics**: Dart's name-based `_`-prefix rule is the opposite
+  of Kotlin's modifier-based rule; encoded as a one-line `isExported` helper
+  with an explanatory comment.
