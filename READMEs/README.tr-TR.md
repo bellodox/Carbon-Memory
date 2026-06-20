@@ -16,15 +16,15 @@
 
 <p align="center">
   <a href="#-hızlı-başlangıç"><img src="https://img.shields.io/badge/Hızlı_Başlangıç-blue" alt="Hızlı Başlangıç" /></a>
-  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/Lisans-MIT-yellow" alt="Lisans: MIT" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory/blob/main/LICENSE"><img src="https://img.shields.io/badge/Lisans-MIT-yellow" alt="Lisans: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
   <a href="#copilot-cli"><img src="https://img.shields.io/badge/Copilot_CLI-24292e" alt="Copilot CLI" /></a>
   <a href="#gemini-cli"><img src="https://img.shields.io/badge/Gemini_CLI-4285F4" alt="Gemini CLI" /></a>
   <a href="#opencode"><img src="https://img.shields.io/badge/OpenCode-38bdf8" alt="OpenCode" /></a>
-  <a href="https://understand-anything.com"><img src="https://img.shields.io/badge/Ana_Sayfa-d4a574" alt="Ana Sayfa" /></a>
-  <a href="https://understand-anything.com/demo/"><img src="https://img.shields.io/badge/Canlı_Demo-00c853" alt="Canlı Demo" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/Ana_Sayfa-d4a574" alt="Ana Sayfa" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/Canlı_Demo-00c853" alt="Canlı Demo" /></a>
 </p>
 
 <p align="center">
@@ -50,7 +50,7 @@ Understand Anything, projenizi çok-ajan hattıyla analiz eden, her dosya, fonks
 ## ✨ Özellikler
 
 > [!NOTE]
-> **Hemen denemek ister misiniz?** [Ana sayfamızda](https://understand-anything.com/) [canlı demoyu](https://understand-anything.com/demo/) deneyin — doğrudan tarayıcınızda kaydırma, yakınlaştırma, arama ve keşfetme yapabileceğiniz tam etkileşimli bir kontrol paneli.
+> **Doğrudan bakmak ister misiniz?** [Depoyu](https://github.com/bellodox/Carbon-Memory) açın; kaynak kod, kurulum adımları ve ilgili içerikler oradadır.
 
 ### Yapısal grafiği keşfedin
 
@@ -206,7 +206,7 @@ Kurulum betiği depoyu `~/.understand-anything/repo` dizinine klonlar ve seçile
 
 Bu depo klonlandığında Cursor, eklentiyi `.cursor-plugin/plugin.json` aracılığıyla otomatik olarak keşfeder. Manuel kurulum gerekmez — sadece klonla ve Cursor'da aç.
 
-Otomatik keşif çalışmazsa manuel kur: **Cursor Settings → Plugins**'i aç, arama alanına `https://github.com/bellodox/Understand-Anything` yapıştır ve oradan ekle.
+Otomatik keşif çalışmazsa manuel kur: **Cursor Settings → Plugins**'i aç, arama alanına `https://github.com/bellodox/Carbon-Memory` yapıştır ve oradan ekle.
 
 ### VS Code + GitHub Copilot
 

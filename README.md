@@ -22,7 +22,7 @@
 
 <p align="center">
   <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-blue" alt="Quick Start" /></a>
-  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#kilocode"><img src="https://img.shields.io/badge/Kilo_Code-111827" alt="Kilo Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
@@ -32,8 +32,8 @@
   <a href="#opencode"><img src="https://img.shields.io/badge/OpenCode-38bdf8" alt="OpenCode" /></a>
   <a href="#mistral-vibe-cli"><img src="https://img.shields.io/badge/Vibe_CLI-7c3aed" alt="Vibe CLI" /></a>
   <a href="#trae"><img src="https://img.shields.io/badge/Trae-7e22ce" alt="Trae" /></a>
-  <a href="https://understand-anything.com"><img src="https://img.shields.io/badge/Homepage-d4a574" alt="Homepage" /></a>
-  <a href="https://understand-anything.com/demo/"><img src="https://img.shields.io/badge/Live_Demo-00c853" alt="Live Demo" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/Homepage-d4a574" alt="Homepage" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/Live_Demo-00c853" alt="Live Demo" /></a>
   <a href="https://egonex.ai"><img src="https://img.shields.io/badge/Understand_Anyone-egonex.ai-d4a574" alt="Understand Anyone" /></a>
 </p>
 
@@ -60,7 +60,7 @@ Understand Anything is a [Claude Code Plugin](https://code.claude.com/docs/en/pl
 ## ✨ Features
 
 > [!NOTE]
-> **Want to skip the reading?** Try the [live demo](https://understand-anything.com/demo/) in our [homepage](https://understand-anything.com/) — a fully interactive dashboard you can pan, zoom, search, and explore right in your browser.
+> **Want to skip the reading?** Open the [repository](https://github.com/bellodox/Carbon-Memory) from the [homepage link](https://github.com/bellodox/Carbon-Memory) — it contains the project source, setup instructions, and related assets.
 
 ### Explore the structural graph
 
@@ -228,7 +228,7 @@ The installer links the project skills into `~/.kilocode/skills/understand/`. Re
 
 Cursor auto-discovers the plugin via `.cursor-plugin/plugin.json` when this repo is cloned. No manual installation needed — just clone and open in Cursor.
 
-If auto-discovery doesn't pick it up, install it manually: open **Cursor Settings → Plugins**, paste `https://github.com/bellodox/Understand-Anything` into the search field, and add it from there.
+If auto-discovery doesn't pick it up, install it manually: open **Cursor Settings → Plugins**, paste `https://github.com/bellodox/Carbon-Memory` into the search field, and add it from there.
 
 ### VS Code + GitHub Copilot
 

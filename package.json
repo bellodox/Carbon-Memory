@@ -4,13 +4,13 @@
   "type": "module",
   "description": "An open-source tool combining LLM intelligence + static analysis to produce interactive dashboards for understanding codebases.",
   "license": "MIT",
-  "homepage": "https://github.com/bellodox/Understand-Anything#readme",
+  "homepage": "https://github.com/bellodox/Carbon-Memory#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bellodox/Understand-Anything.git"
+    "url": "git+https://github.com/bellodox/Carbon-Memory.git"
   },
   "bugs": {
-    "url": "https://github.com/bellodox/Understand-Anything/issues"
+    "url": "https://github.com/bellodox/Carbon-Memory/issues"
   },
   "keywords": [
     "claude-code",

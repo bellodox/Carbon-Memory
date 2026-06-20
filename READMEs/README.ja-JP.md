@@ -16,15 +16,15 @@
 
 <p align="center">
   <a href="#-クイックスタート"><img src="https://img.shields.io/badge/Quick_Start-blue" alt="クイックスタート" /></a>
-  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
   <a href="#copilot-cli"><img src="https://img.shields.io/badge/Copilot_CLI-24292e" alt="Copilot CLI" /></a>
   <a href="#gemini-cli"><img src="https://img.shields.io/badge/Gemini_CLI-4285F4" alt="Gemini CLI" /></a>
   <a href="#opencode"><img src="https://img.shields.io/badge/OpenCode-38bdf8" alt="OpenCode" /></a>
-  <a href="https://understand-anything.com"><img src="https://img.shields.io/badge/Homepage-d4a574" alt="ホームページ" /></a>
-  <a href="https://understand-anything.com/demo/"><img src="https://img.shields.io/badge/Live_Demo-00c853" alt="ライブデモ" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/Homepage-d4a574" alt="ホームページ" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/Live_Demo-00c853" alt="ライブデモ" /></a>
 </p>
 
 <p align="center">
@@ -50,7 +50,7 @@ Understand Anything は [Claude Code Plugin](https://code.claude.com/docs/en/plu
 ## ✨ 機能
 
 > [!NOTE]
-> **すぐに試したいですか？** [ホームページ](https://understand-anything.com/)で[ライブデモ](https://understand-anything.com/demo/)をお試しください — パン、ズーム、検索、探索ができる完全インタラクティブなダッシュボードです。
+> **すぐに確認したいですか？** [リポジトリ](https://github.com/bellodox/Carbon-Memory) を開くと、ソースコード、導入手順、関連アセットを確認できます。
 
 ### コード構造グラフを探索
 
@@ -206,7 +206,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 Cursorはこのリポジトリをクローンすると `.cursor-plugin/plugin.json` 経由でプラグインを自動検出します。手動インストールは不要です — クローンしてCursorで開くだけです。
 
-自動検出されない場合は、手動でインストールしてください：**Cursor Settings → Plugins** を開き、検索欄に `https://github.com/bellodox/Understand-Anything` を貼り付けて追加します。
+自動検出されない場合は、手動でインストールしてください：**Cursor Settings → Plugins** を開き、検索欄に `https://github.com/bellodox/Carbon-Memory` を貼り付けて追加します。
 
 ### VS Code + GitHub Copilot
 

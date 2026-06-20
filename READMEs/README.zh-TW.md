@@ -15,15 +15,15 @@
 
 <p align="center">
   <a href="#-快速開始"><img src="https://img.shields.io/badge/快速開始-blue" alt="Quick Start" /></a>
-  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/授權條款-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory/blob/main/LICENSE"><img src="https://img.shields.io/badge/授權條款-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
   <a href="#copilot-cli"><img src="https://img.shields.io/badge/Copilot_CLI-24292e" alt="Copilot CLI" /></a>
   <a href="#gemini-cli"><img src="https://img.shields.io/badge/Gemini_CLI-4285F4" alt="Gemini CLI" /></a>
   <a href="#opencode"><img src="https://img.shields.io/badge/OpenCode-38bdf8" alt="OpenCode" /></a>
-  <a href="https://understand-anything.com"><img src="https://img.shields.io/badge/專案首頁-d4a574" alt="Homepage" /></a>
-  <a href="https://understand-anything.com/demo/"><img src="https://img.shields.io/badge/線上展示-00c853" alt="Live Demo" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/專案首頁-d4a574" alt="Homepage" /></a>
+  <a href="https://github.com/bellodox/Carbon-Memory"><img src="https://img.shields.io/badge/線上展示-00c853" alt="Live Demo" /></a>
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ Understand Anything 是一個 [Claude Code Plugin](https://code.claude.com/docs/
 ## ✨ 核心功能
 
 > [!NOTE]
-> **想直接體驗？** 在我們的[首頁](https://understand-anything.com/)試試[線上演示](https://understand-anything.com/demo/) — 一個可以平移、縮放、搜尋和探索的全互動式儀表盤。
+> **想直接查看？** 打開[儲存庫](https://github.com/bellodox/Carbon-Memory)，即可查看原始碼、安裝說明與相關資源。
 
 ### 探索程式碼結構圖
 
@@ -205,7 +205,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 複製此儲存庫後，Cursor 會自動透過 `.cursor-plugin/plugin.json` 檔案發現外掛程式。無需手動安裝 — 只需複製並在 Cursor 中開啟即可。
 
-若自動發現未生效，可手動安裝：開啟 **Cursor Settings → Plugins**，在搜尋框中貼上 `https://github.com/bellodox/Understand-Anything` 並新增。
+若自動發現未生效，可手動安裝：開啟 **Cursor Settings → Plugins**，在搜尋框中貼上 `https://github.com/bellodox/Carbon-Memory` 並新增。
 
 ### VS Code + GitHub Copilot
 
