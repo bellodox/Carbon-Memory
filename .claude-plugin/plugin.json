@@ -1,12 +1,12 @@
 {
-  "name": "understand-anything",
+  "name": "carbon-memory",
   "description": "AI-powered codebase understanding — analyze, visualize, and explain any project",
   "version": "2.8.0",
   "author": {
     "name": "Egonex"
   },
-  "homepage": "https://github.com/Egonex-AI/Understand-Anything",
-  "repository": "https://github.com/Egonex-AI/Understand-Anything",
+  "homepage": "https://github.com/bellodox/Understand-Anything",
+  "repository": "https://github.com/bellodox/Understand-Anything",
   "license": "MIT",
   "keywords": [
     "codebase-analysis",

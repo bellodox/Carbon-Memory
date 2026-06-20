@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="#-빠른-시작"><img src="https://img.shields.io/badge/빠른_시작-blue" alt="Quick Start" /></a>
-  <a href="https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/라이선스-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/라이선스-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
@@ -205,7 +205,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 이 저장소를 클론하면 Cursor가 `.cursor-plugin/plugin.json`을 통해 플러그인을 자동으로 인식합니다. 수동 설치가 필요 없습니다. 클론 후 Cursor에서 열기만 하면 됩니다.
 
-자동 인식이 되지 않으면 수동으로 설치하세요: **Cursor Settings → Plugins**를 열고 검색란에 `https://github.com/Egonex-AI/Understand-Anything`를 붙여넣은 뒤 추가하세요.
+자동 인식이 되지 않으면 수동으로 설치하세요: **Cursor Settings → Plugins**를 열고 검색란에 `https://github.com/bellodox/Understand-Anything`를 붙여넣은 뒤 추가하세요.
 
 ### VS Code + GitHub Copilot
 

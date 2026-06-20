@@ -1,16 +1,16 @@
 {
-  "name": "understand-anything",
+  "name": "carbon-memory",
   "private": true,
   "type": "module",
   "description": "An open-source tool combining LLM intelligence + static analysis to produce interactive dashboards for understanding codebases.",
   "license": "MIT",
-  "homepage": "https://github.com/Egonex-AI/Understand-Anything#readme",
+  "homepage": "https://github.com/bellodox/Understand-Anything#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Egonex-AI/Understand-Anything.git"
+    "url": "git+https://github.com/bellodox/Understand-Anything.git"
   },
   "bugs": {
-    "url": "https://github.com/Egonex-AI/Understand-Anything/issues"
+    "url": "https://github.com/bellodox/Understand-Anything/issues"
   },
   "keywords": [
     "claude-code",

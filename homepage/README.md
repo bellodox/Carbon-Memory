@@ -1,6 +1,6 @@
-# Understand Anything Homepage
+# Carbon Memory Homepage
 
-Astro site for the Understand Anything project homepage.
+Astro site for the Carbon Memory project homepage.
 
 ## Project Structure
 

@@ -1,8 +1,8 @@
-# Understand Anything — Agent Guide
+# Carbon Memory — Agent Guide
 
 ## Project identity and scope
 
-Understand Anything is a pnpm monorepo for analyzing codebases and markdown knowledge bases into interactive knowledge graphs. Durable maintainer documentation lives in [`docs/maintainer-wiki/index.md`](docs/maintainer-wiki/index.md).
+Carbon Memory is a pnpm monorepo for analyzing codebases and markdown knowledge bases into interactive knowledge graphs. Durable maintainer documentation lives in [`docs/maintainer-wiki/index.md`](docs/maintainer-wiki/index.md).
 
 ## Source-of-truth policy
 

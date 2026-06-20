@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-hızlı-başlangıç"><img src="https://img.shields.io/badge/Hızlı_Başlangıç-blue" alt="Hızlı Başlangıç" /></a>
-  <a href="https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/Lisans-MIT-yellow" alt="Lisans: MIT" /></a>
+  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/Lisans-MIT-yellow" alt="Lisans: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
@@ -206,7 +206,7 @@ Kurulum betiği depoyu `~/.understand-anything/repo` dizinine klonlar ve seçile
 
 Bu depo klonlandığında Cursor, eklentiyi `.cursor-plugin/plugin.json` aracılığıyla otomatik olarak keşfeder. Manuel kurulum gerekmez — sadece klonla ve Cursor'da aç.
 
-Otomatik keşif çalışmazsa manuel kur: **Cursor Settings → Plugins**'i aç, arama alanına `https://github.com/Egonex-AI/Understand-Anything` yapıştır ve oradan ekle.
+Otomatik keşif çalışmazsa manuel kur: **Cursor Settings → Plugins**'i aç, arama alanına `https://github.com/bellodox/Understand-Anything` yapıştır ve oradan ekle.
 
 ### VS Code + GitHub Copilot
 

@@ -1,4 +1,4 @@
-# Understand Anything Maintainer Wiki
+# Carbon Memory Maintainer Wiki
 
 This wiki is the durable maintainer-facing documentation set for the repository. Within Kilo Code, it acts as the canonical layer of Carbon Memory: the repository-memory system that combines durable wiki content, volatile local memory, and indexed project context.
 

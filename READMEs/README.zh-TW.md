@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="#-快速開始"><img src="https://img.shields.io/badge/快速開始-blue" alt="Quick Start" /></a>
-  <a href="https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/授權條款-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/授權條款-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
@@ -205,7 +205,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 複製此儲存庫後，Cursor 會自動透過 `.cursor-plugin/plugin.json` 檔案發現外掛程式。無需手動安裝 — 只需複製並在 Cursor 中開啟即可。
 
-若自動發現未生效，可手動安裝：開啟 **Cursor Settings → Plugins**，在搜尋框中貼上 `https://github.com/Egonex-AI/Understand-Anything` 並新增。
+若自動發現未生效，可手動安裝：開啟 **Cursor Settings → Plugins**，在搜尋框中貼上 `https://github.com/bellodox/Understand-Anything` 並新增。
 
 ### VS Code + GitHub Copilot
 

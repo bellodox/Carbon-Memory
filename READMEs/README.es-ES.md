@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="#-inicio-rápido"><img src="https://img.shields.io/badge/Inicio_Rápido-blue" alt="Quick Start" /></a>
-  <a href="https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/Licencia-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/Licencia-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
@@ -205,7 +205,7 @@ El instalador clona el repositorio en `~/.understand-anything/repo` y crea los e
 
 Cursor detecta automáticamente el plugin a través de `.cursor-plugin/plugin.json` cuando se clona este repositorio. No requiere instalación manual: simplemente clona y abre en Cursor.
 
-Si la detección automática no lo reconoce, instálalo manualmente: abre **Cursor Settings → Plugins**, pega `https://github.com/Egonex-AI/Understand-Anything` en el campo de búsqueda y añádelo desde allí.
+Si la detección automática no lo reconoce, instálalo manualmente: abre **Cursor Settings → Plugins**, pega `https://github.com/bellodox/Understand-Anything` en el campo de búsqueda y añádelo desde allí.
 
 ### VS Code + GitHub Copilot
 

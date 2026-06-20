@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-クイックスタート"><img src="https://img.shields.io/badge/Quick_Start-blue" alt="クイックスタート" /></a>
-  <a href="https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
@@ -206,7 +206,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 Cursorはこのリポジトリをクローンすると `.cursor-plugin/plugin.json` 経由でプラグインを自動検出します。手動インストールは不要です — クローンしてCursorで開くだけです。
 
-自動検出されない場合は、手動でインストールしてください：**Cursor Settings → Plugins** を開き、検索欄に `https://github.com/Egonex-AI/Understand-Anything` を貼り付けて追加します。
+自動検出されない場合は、手動でインストールしてください：**Cursor Settings → Plugins** を開き、検索欄に `https://github.com/bellodox/Understand-Anything` を貼り付けて追加します。
 
 ### VS Code + GitHub Copilot
 

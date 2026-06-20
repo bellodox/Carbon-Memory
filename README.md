@@ -1,4 +1,4 @@
-<h1 align="center">Understand Anything</h1>
+<h1 align="center">Carbon Memory</h1>
 
 <p align="center">
   <strong>Turn any codebase, knowledge base, or docs into an interactive knowledge graph you can explore, search, and ask questions about.</strong>
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <strong>Understand Anything. <a href="https://egonex.ai">Understand Anyone.</a></strong>
+  <strong>Carbon Memory. <a href="https://egonex.ai">Understand Anyone.</a></strong>
   <br />
   <em>AI should help people, not replace them.</em>
 </p>
@@ -22,7 +22,7 @@
 
 <p align="center">
   <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-blue" alt="Quick Start" /></a>
-  <a href="https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#kilocode"><img src="https://img.shields.io/badge/Kilo_Code-111827" alt="Kilo Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
@@ -228,7 +228,7 @@ The installer links the project skills into `~/.kilocode/skills/understand/`. Re
 
 Cursor auto-discovers the plugin via `.cursor-plugin/plugin.json` when this repo is cloned. No manual installation needed — just clone and open in Cursor.
 
-If auto-discovery doesn't pick it up, install it manually: open **Cursor Settings → Plugins**, paste `https://github.com/Egonex-AI/Understand-Anything` into the search field, and add it from there.
+If auto-discovery doesn't pick it up, install it manually: open **Cursor Settings → Plugins**, paste `https://github.com/bellodox/Understand-Anything` into the search field, and add it from there.
 
 ### VS Code + GitHub Copilot
 

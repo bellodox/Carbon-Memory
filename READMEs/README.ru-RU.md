@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-быстрый-старт"><img src="https://img.shields.io/badge/Быстрый_старт-blue" alt="Quick Start" /></a>
-  <a href="https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/Лицензия-MIT-yellow" alt="License: MIT" /></a>
+  <a href="https://github.com/bellodox/Understand-Anything/blob/main/LICENSE"><img src="https://img.shields.io/badge/Лицензия-MIT-yellow" alt="License: MIT" /></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-8A2BE2" alt="Claude Code" /></a>
   <a href="#codex"><img src="https://img.shields.io/badge/Codex-000000" alt="Codex" /></a>
   <a href="#vs-code--github-copilot"><img src="https://img.shields.io/badge/Copilot-24292e" alt="Copilot" /></a>
@@ -206,7 +206,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 Cursor автоматически обнаруживает плагин через `.cursor-plugin/plugin.json` при клонировании этого репозитория. Ручная установка не требуется — просто склонируйте и откройте в Cursor.
 
-Если автообнаружение не сработало, установите вручную: откройте **Cursor Settings → Plugins**, вставьте `https://github.com/Egonex-AI/Understand-Anything` в поле поиска и добавьте оттуда.
+Если автообнаружение не сработало, установите вручную: откройте **Cursor Settings → Plugins**, вставьте `https://github.com/bellodox/Understand-Anything` в поле поиска и добавьте оттуда.
 
 ### VS Code + GitHub Copilot
 
