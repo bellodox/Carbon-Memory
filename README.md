@@ -114,7 +114,7 @@ Point `/understand-knowledge` at a [Karpathy-pattern LLM wiki](https://gist.gith
 ### 1. Install the plugin
 
 ```bash
-/plugin marketplace add Egonex-AI/Understand-Anything
+/plugin marketplace add bellodox/Carbon-Memory
 /plugin install understand-anything
 ```
 
@@ -190,7 +190,7 @@ Understand-Anything works across multiple AI coding platforms.
 ### Claude Code (Native)
 
 ```bash
-/plugin marketplace add Egonex-AI/Understand-Anything
+/plugin marketplace add bellodox/Carbon-Memory
 /plugin install understand-anything
 ```
 
@@ -200,14 +200,14 @@ Understand-Anything works across multiple AI coding platforms.
 
 **macOS / Linux:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/bellodox/Carbon-Memory/main/install.sh | bash
 # or skip the prompt by passing the platform:
-curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash -s codex
+curl -fsSL https://raw.githubusercontent.com/bellodox/Carbon-Memory/main/install.sh | bash -s codex
 ```
 
 **Windows (PowerShell):**
 ```powershell
-iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/bellodox/Carbon-Memory/main/install.ps1 | iex
 ```
 
 The installer clones the repo to `~/.understand-anything/repo` and creates the right symlinks for the chosen platform. Restart your CLI/IDE afterwards.
@@ -219,7 +219,7 @@ The installer clones the repo to `~/.understand-anything/repo` and creates the r
 ### Kilo Code
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash -s kilocode
+curl -fsSL https://raw.githubusercontent.com/bellodox/Carbon-Memory/main/install.sh | bash -s kilocode
 ```
 
 The installer links the project skills into `~/.kilocode/skills/understand/`. Restart Kilo Code after installation so the new skills are discovered.
@@ -239,13 +239,13 @@ For personal skills (available across all projects), run the `install.sh` above 
 ### Copilot CLI
 
 ```bash
-copilot plugin install Egonex-AI/Understand-Anything:understand-anything-plugin
+copilot plugin install bellodox/Carbon-Memory:understand-anything
 ```
 
 ### Kiro CLI / IDE
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash -s kiro
+curl -fsSL https://raw.githubusercontent.com/bellodox/Carbon-Memory/main/install.sh | bash -s kiro
 ```
 
 After installation:

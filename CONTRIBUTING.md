@@ -22,8 +22,8 @@ Thank you for your interest in contributing to Understand Anything! This documen
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Understand-Anything.git
-   cd Understand-Anything
+   git clone https://github.com/YOUR_USERNAME/Carbon-Memory.git
+   cd Carbon-Memory
    ```
 
 2. **Install Dependencies**

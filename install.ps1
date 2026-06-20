@@ -58,7 +58,7 @@ Supported platforms:
 $($Platforms.Keys -join ', ')
 
 Environment:
-  UA_REPO_URL   Override clone URL
+  UA_REPO_URL   Override clone URL (default: https://github.com/bellodox/Carbon-Memory.git)
   UA_DIR        Override clone destination (default: %USERPROFILE%\.understand-anything\repo)
 "@
 }

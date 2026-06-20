@@ -9,11 +9,11 @@
 #   ./install.sh --help
 #
 # Curl-pipe usage:
-#   curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash
-#   curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash -s codex
+#   curl -fsSL https://raw.githubusercontent.com/bellodox/Carbon-Memory/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/bellodox/Carbon-Memory/main/install.sh | bash -s codex
 #
 # Environment:
-#   UA_REPO_URL  Override clone URL (default: official GitHub repo)
+#   UA_REPO_URL  Override clone URL (default: https://github.com/bellodox/Carbon-Memory.git)
 #   UA_DIR       Override clone destination (default: $HOME/.understand-anything/repo)
 
 set -euo pipefail
@@ -282,7 +282,7 @@ Supported platforms:
 $(platform_ids | sed 's/^/  - /')
 
 Environment:
-  UA_REPO_URL  Override clone URL (default: official repo)
+  UA_REPO_URL  Override clone URL (default: https://github.com/bellodox/Carbon-Memory.git)
   UA_DIR       Override clone destination (default: \$HOME/.understand-anything/repo)
 USAGE
 }
