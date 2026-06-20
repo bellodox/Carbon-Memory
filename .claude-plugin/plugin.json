@@ -1,5 +1,5 @@
 {
-  "name": "carbon-memory",
+  "name": "understand-anything",
   "description": "AI-powered codebase understanding — analyze, visualize, and explain any project",
   "version": "2.8.0",
   "author": {
@@ -14,5 +14,7 @@
     "architecture",
     "onboarding",
     "dashboard"
-  ]
+  ],
+  "skills": "./understand-anything-plugin/skills/",
+  "agents": "./understand-anything-plugin/agents/"
 }

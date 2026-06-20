@@ -27,6 +27,19 @@ Use [`docs/maintainer-wiki/index.md`](docs/maintainer-wiki/index.md) as the dura
 - Keep temporary session context in the memory bank only.
 - Add new wiki pages to [`docs/maintainer-wiki/index.md`](docs/maintainer-wiki/index.md) immediately.
 - Treat the commands `Initialize carbon memory.` and `Update carbon memory.` as requests to initialize or refresh this combined wiki + memory-bank architecture.
+- These commands MUST use the Understand Anything plugin to analyze the codebase first, then persist the findings into Carbon Memory. The canonical analysis entrypoint is `/understand`. After analysis, feed relevant structural and semantic insights into the maintainer wiki (`docs/maintainer-wiki/`) and volatile memory bank (`.kilocode/rules/memory-bank/`).
+- Incremental updates (`Update carbon memory.`) should reuse `/understand` (incremental by default) to minimize token usage, then update only the affected wiki and memory-bank sections.
+- Available codebase-understanding skills to leverage:
+  - `/understand` — full or incremental codebase scan and graph generation
+  - `/understand-chat` — query the knowledge graph (e.g. "How does the payment flow work?")
+  - `/understand-diff` — analyze impact of current changes
+  - `/understand-explain <path>` — deep-dive into a specific file or function
+  - `/understand-onboard` — generate an onboarding guide for new team members
+  - `/understand-domain` — extract business domain knowledge (domains, flows, steps)
+  - `/understand-knowledge <path>` — analyze a Karpathy-pattern LLM wiki knowledge base (requires existing wiki/memory bank; use after initialization)
+  - `/understand-knowledge docs/maintainer-wiki` — analyze the maintainer wiki as a knowledge base during Carbon Memory initialization
+  - `/understand --auto-update` — enable incremental auto-update via post-commit hook
+  - `/understand <subdir>` — scope analysis to a subdirectory for large monorepos
 
 ## Citation and provenance expectations
 

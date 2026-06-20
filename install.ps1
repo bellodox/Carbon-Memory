@@ -246,6 +246,19 @@ function Cmd-Install([string]$Id) {
     if ($Id -eq 'kiro') {
         Write-Host "`n  Usage: kiro-cli chat --agent understand `"Analyze this project`""
     }
+
+    if ($Id -eq 'kilocode') {
+        Write-Host '→ Installing Carbon Memory initialization rule'
+        $rulesDir = Join-Path $HOME '.kilocode\rules'
+        if (-not (Test-Path $rulesDir)) { New-Item -ItemType Directory -Path $rulesDir | Out-Null }
+        $ruleSrc = Join-Path $RepoDir 'understand-anything-plugin\rules\wiki-and-memory-bank-init.md'
+        if (Test-Path $ruleSrc) {
+            Copy-Item -LiteralPath $ruleSrc -Destination (Join-Path $rulesDir 'wiki-and-memory-bank-init.md') -Force
+            Write-Host "  ✓ $rulesDir\wiki-and-memory-bank-init.md"
+        } else {
+            Write-Host '  • Carbon Memory rule not found in plugin, skipping'
+        }
+    }
 }
 
 function Cmd-Uninstall([string]$Id) {

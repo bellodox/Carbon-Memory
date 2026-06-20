@@ -221,6 +221,19 @@ KIROEOF
     printf '  ✓ %s\n' "$HOME/.kiro/agents/understand.json"
   fi
 
+  if [[ "$id" == "kilocode" ]]; then
+    printf -- '→ Installing Carbon Memory initialization rule\n'
+    local rules_dir="$HOME/.kilocode/rules"
+    mkdir -p "$rules_dir"
+    local rule_src="$REPO_DIR/understand-anything-plugin/rules/wiki-and-memory-bank-init.md"
+    if [[ -f "$rule_src" ]]; then
+      cp "$rule_src" "$rules_dir/wiki-and-memory-bank-init.md"
+      printf '  ✓ %s\n' "$rules_dir/wiki-and-memory-bank-init.md"
+    else
+      printf '  • Carbon Memory rule not found in plugin, skipping\n'
+    fi
+  fi
+
   printf '\n✓ Installed Understand-Anything for %s\n' "$id"
   printf '  Restart your CLI or IDE to pick up the skills.\n'
   if [[ "$id" == "vscode" ]]; then

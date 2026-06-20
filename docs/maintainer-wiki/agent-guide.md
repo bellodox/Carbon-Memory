@@ -22,6 +22,17 @@ Use this wiki as the durable maintainer knowledge base for the repository. In Ca
 - temporary session scratch notes
 - claims that have not been checked against code or tests
 
+## Carbon Memory initialization and update flow
+
+When `Initialize carbon memory.` or `Update carbon memory.` is invoked, the agent must:
+
+1. Run `/understand` (or a scoped variant such as `/understand <subdir>` for large monorepos) to scan the codebase, extract structural elements, and generate or refresh `.understand-anything/knowledge-graph.json`.
+2. Distill the findings into durable summaries covering architecture, component responsibilities, and maintainer workflows, then write or update the relevant pages under `docs/maintainer-wiki/`.
+3. Also write or refresh `.kilocode/rules/memory-bank/brief.md`, `.kilocode/rules/memory-bank/context.md`, and `.kilocode/rules/memory-bank/active.md` with the current session's findings and next actions.
+4. Update [`docs/maintainer-wiki/index.md`](docs/maintainer-wiki/index.md) immediately if any new durable pages are created.
+
+Relevant plugin skills to invoke during these flows include `/understand-chat`, `/understand-diff`, `/understand-explain <path>`, `/understand-onboard`, `/understand-domain`, `/understand-knowledge <path>`, `/understand-knowledge docs/maintainer-wiki`, and `/understand --auto-update`.
+
 ## Canonical boundaries
 
 - User-facing overview: [`README.md`](README.md)
