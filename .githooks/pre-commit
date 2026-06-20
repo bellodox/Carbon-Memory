@@ -1,0 +1,47 @@
+#!/usr/bin/env sh
+set -eu
+
+# Carbon Memory pre-commit guard.
+# Blocks commits when repository-memory source files changed without also
+# staging corresponding Carbon Memory updates.
+
+if ! git rev-parse --git-dir >/dev/null 2>&1; then
+  exit 0
+fi
+
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR)
+
+if [ -z "$STAGED_FILES" ]; then
+  exit 0
+fi
+
+has_match() {
+  printf '%s\n' "$STAGED_FILES" | grep -Eq "$1"
+}
+
+SOURCE_CHANGED=0
+CARBON_MEMORY_UPDATED=0
+
+if has_match '^(AGENTS\.md|CLAUDE\.md|README\.md|docs/maintainer-wiki/|understand-anything-plugin/agents/|understand-anything-plugin/packages/core/src/|understand-anything-plugin/packages/dashboard/src/)'; then
+  SOURCE_CHANGED=1
+fi
+
+if has_match '^(docs/maintainer-wiki/|\.kilocode/rules/memory-bank/|AGENTS\.md)$'; then
+  CARBON_MEMORY_UPDATED=1
+fi
+
+if [ "$SOURCE_CHANGED" -eq 1 ] && [ "$CARBON_MEMORY_UPDATED" -eq 0 ]; then
+  echo "[carbon-memory] Repository-memory source files changed, but no Carbon Memory updates are staged." >&2
+  echo "[carbon-memory] Run 'Update carbon memory.' and stage the resulting wiki/memory updates before committing." >&2
+  echo "[carbon-memory] If this is intentional, bypass once with: SKIP_CARBON_MEMORY_HOOK=1 git commit ..." >&2
+  if [ "${SKIP_CARBON_MEMORY_HOOK:-0}" != "1" ]; then
+    exit 1
+  fi
+fi
+
+if [ -d "docs/maintainer-wiki" ] && [ ! -f "docs/maintainer-wiki/index.md" ]; then
+  echo "[carbon-memory] Missing [docs/maintainer-wiki/index.md](docs/maintainer-wiki/index.md)." >&2
+  exit 1
+fi
+
+exit 0

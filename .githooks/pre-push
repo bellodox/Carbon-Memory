@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+set -eu
+
+# Carbon Memory pre-push guard.
+# Ensures the durable wiki entrypoint exists before sharing repository state.
+
+if ! git rev-parse --git-dir >/dev/null 2>&1; then
+  exit 0
+fi
+
+if [ ! -f "docs/maintainer-wiki/index.md" ]; then
+  echo "[carbon-memory] Missing [docs/maintainer-wiki/index.md](docs/maintainer-wiki/index.md)." >&2
+  echo "[carbon-memory] Initialize Carbon Memory before pushing shared repository history." >&2
+  exit 1
+fi
+
+if [ ! -f "AGENTS.md" ]; then
+  echo "[carbon-memory] Missing [AGENTS.md](AGENTS.md)." >&2
+  exit 1
+fi
+
+exit 0

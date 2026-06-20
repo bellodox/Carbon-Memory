@@ -31,7 +31,8 @@
     "build": "pnpm -r build",
     "test": "vitest run",
     "dev:dashboard": "pnpm --filter @understand-anything/dashboard dev",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "setup:hooks": "node ./scripts/setup-git-hooks.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

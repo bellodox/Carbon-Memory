@@ -32,6 +32,7 @@ gemini|$HOME/.agents/skills|per-skill
 codex|$HOME/.agents/skills|per-skill
 opencode|$HOME/.agents/skills|per-skill
 pi|$HOME/.agents/skills|per-skill
+kilocode|$HOME/.kilocode/skills|per-skill
 openclaw|$HOME/.openclaw/skills|folder
 antigravity|$HOME/.gemini/antigravity/skills|folder
 vibe|$HOME/.vibe/skills|per-skill
@@ -225,6 +226,10 @@ KIROEOF
   if [[ "$id" == "vscode" ]]; then
     printf '\n  Tip: VS Code can also auto-discover the plugin by opening this repo\n'
     printf '       directly (it reads .copilot-plugin/plugin.json), no symlinks needed.\n'
+  fi
+  if [[ "$id" == "kilocode" ]]; then
+    printf '\n  Tip: Kilo Code loads global skills from ~/.kilocode/skills.\n'
+    printf '       Restart Kilo Code after installation so the new skills are discovered.\n'
   fi
   if [[ "$id" == "kiro" ]]; then
     printf '\n  Usage: kiro-cli chat --agent understand "Analyze this project"\n'

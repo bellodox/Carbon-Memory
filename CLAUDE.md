@@ -96,3 +96,9 @@ cp -R ./understand-anything-plugin/* ~/.claude/plugins/cache/understand-anything
 ```
 
 **To revert to upstream:** Uninstall and reinstall the plugin from the marketplace — it repopulates the cache from the upstream repo.
+
+## Kilo Code Integration
+
+- Global Kilo Code skills are installed under `~/.kilocode/skills/` by the `kilocode` target in [`install.sh`](install.sh:29) and [`install.ps1`](install.ps1:29)
+- Use `install.sh kilocode` or `install.ps1 kilocode` to install for Kilo Code
+- Restart Kilo Code after installation so the new skills are discovered

@@ -32,6 +32,7 @@ $Platforms = [ordered]@{
     codex       = @{ Target = (Join-Path $HOME '.agents\skills');             Style = 'per-skill' }
     opencode    = @{ Target = (Join-Path $HOME '.agents\skills');             Style = 'per-skill' }
     pi          = @{ Target = (Join-Path $HOME '.agents\skills');             Style = 'per-skill' }
+    kilocode    = @{ Target = (Join-Path $HOME '.kilocode\skills');          Style = 'per-skill' }
     openclaw    = @{ Target = (Join-Path $HOME '.openclaw\skills');           Style = 'folder' }
     antigravity = @{ Target = (Join-Path $HOME '.gemini\antigravity\skills'); Style = 'folder' }
     vscode      = @{ Target = (Join-Path $HOME '.copilot\skills');            Style = 'per-skill' }
@@ -237,6 +238,10 @@ function Cmd-Install([string]$Id) {
     if ($Id -eq 'vscode') {
         Write-Host "`n  Tip: VS Code can also auto-discover the plugin by opening this repo"
         Write-Host '       directly (it reads .copilot-plugin/plugin.json), no symlinks needed.'
+    }
+    if ($Id -eq 'kilocode') {
+        Write-Host "`n  Tip: Kilo Code loads global skills from ~/.kilocode/skills."
+        Write-Host '       Restart Kilo Code after installation so the new skills are discovered.'
     }
     if ($Id -eq 'kiro') {
         Write-Host "`n  Usage: kiro-cli chat --agent understand `"Analyze this project`""
